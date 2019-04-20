@@ -328,11 +328,6 @@ def bbox_ious(boxes1, boxes2, x1y1x2y2=True):
     uarea = area1 + area2 - carea
     return carea/uarea
 
-
-
-
-
-
 def nms(boxes, nms_thresh):
     if len(boxes) == 0:
         return boxes
@@ -353,11 +348,6 @@ def nms(boxes, nms_thresh):
                     #print(box_i, box_j, bbox_iou(box_i, box_j, x1y1x2y2=False))
                     box_j[4] = 0
     return out_boxes
-
-
-
-
-
 
 
 def convert2cpu(gpu_matrix):
